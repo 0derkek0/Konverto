@@ -1,10 +1,10 @@
 {
-  "_hinweis": "Die drei Identity-Werte stehen in Partner Center unter: App > Produktverwaltung > Produktidentität. Bis dahin funktionieren die Testwerte für lokale Installation.",
-  "identity_name": "Konverto.Test",
-  "publisher": "CN=Konverto Test",
-  "publisher_display_name": "Konverto",
+  "_hinweis": "Werte aus Partner Center > Produktverwaltung > Produktidentität. display_name muss ein in Partner Center reservierter App-Name sein.",
+  "identity_name": "DerKeK.Konverto",
+  "publisher": "CN=CED8317A-37E0-4413-B3F9-4D0717486F47",
+  "publisher_display_name": "DerKeK",
   "display_name": "Konverto",
   "description": "Video, Audio, Bilder, PDFs, Dokumente und Tabellen lokal konvertieren.",
   "language": "de-DE",
-  "background_color": "#0d0f16"
+  "background_color": "#17171a"
 }

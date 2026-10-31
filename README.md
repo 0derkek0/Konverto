@@ -6,6 +6,7 @@ Desktop-App, die Dateien **komplett offline** umwandelt. Nichts wird hochgeladen
 
 ## Starten
 
+- **Microsoft Store:** <https://apps.microsoft.com/detail/9P2PN5RRRSLM> (nach der Freigabe durch Microsoft)
 - **Fertige EXE:** `dist\Konverto\Konverto.exe` (kein Python nötig; den ganzen Ordner `dist\Konverto` mitnehmen)
 - **Aus dem Quellcode:** Doppelklick auf `Konverto starten.bat` (richtet beim ersten Start alles ein)
 - **EXE neu bauen:** `build_exe.bat`
