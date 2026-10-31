@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from PySide6.QtCore import QEasingCurve, QPoint, QPointF, QPropertyAnimation, QRect, QRectF, QSize, Qt, QTimer, Signal
-from PySide6.QtGui import QColor, QFont, QIcon, QPainter, QPainterPath, QPen, QPixmap
+from PySide6.QtGui import QColor, QFont, QIcon, QPainter, QPainterPath, QPainterPathStroker, QPen, QPixmap
 from PySide6.QtWidgets import (QButtonGroup, QComboBox, QFrame, QHBoxLayout, QLabel, QLayout, QProgressBar,
                                QPushButton, QSizePolicy, QVBoxLayout, QWidget)
 
@@ -29,10 +29,17 @@ def draw_logo(size: int) -> QPixmap:
     l, r = s * 0.24, s * 0.76
     y1, y2 = s * 0.37, s * 0.63
     a = s * 0.13
-    p.drawLine(QPointF(l, y1), QPointF(r, y1))
-    p.drawPolyline([QPointF(r - a, y1 - a), QPointF(r, y1), QPointF(r - a, y1 + a)])
-    p.drawLine(QPointF(r, y2), QPointF(l, y2))
-    p.drawPolyline([QPointF(l + a, y2 - a), QPointF(l, y2), QPointF(l + a, y2 + a)])
+    # Umriss vereinen und als eine Flaeche fuellen, damit an der Spitze keine Kantenglaettungs-Naht entsteht
+    lines = QPainterPath()
+    for tail, tip, back in ((l, r, r - a), (r, l, l + a)):
+        y = y1 if tip == r else y2
+        lines.moveTo(tail, y)
+        lines.lineTo(tip, y)
+        lines.moveTo(back, y - a)
+        lines.lineTo(tip, y)
+        lines.lineTo(back, y + a)
+    stroker = QPainterPathStroker(pen)
+    p.fillPath(stroker.createStroke(lines).simplified(), QColor(theme.ACCENT_TEXT))
     p.end()
     return pm
 
