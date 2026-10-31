@@ -1,0 +1,52 @@
+Konverto – Hinweise zu Drittanbieter-Software
+=============================================
+
+Konverto selbst: Copyright (C) 2026 DerKeK, lizenziert unter der
+GNU Affero General Public License v3.0. Quellcode: https://github.com/0derkek0/Konverto
+
+Konverto bündelt die folgenden Open-Source-Komponenten. Die vollständigen
+Lizenztexte und der Quellcode sind unter den angegebenen Adressen erhältlich.
+
+FFmpeg 7.1 (Build von gyan.dev, über imageio-ffmpeg)
+  Lizenz: GNU General Public License v3.0 (enthält x264, x265, LAME, libvpx, Opus u. a.)
+  Quellcode: https://ffmpeg.org/download.html  ·  Build: https://www.gyan.dev/ffmpeg/builds/
+
+MuPDF / PyMuPDF
+  Lizenz: GNU Affero General Public License v3.0
+  Quellcode: https://github.com/pymupdf/PyMuPDF  ·  https://mupdf.com
+
+Qt 6 / PySide6
+  Lizenz: GNU Lesser General Public License v3.0
+  Quellcode: https://code.qt.io  ·  https://download.qt.io/official_releases/QtForPython/
+
+Python 3.10
+  Lizenz: Python Software Foundation License
+  https://www.python.org
+
+Pillow
+  Lizenz: MIT-CMU (HPND)
+  https://github.com/python-pillow/Pillow
+
+pillow-heif (mit libheif, libde265, x265, aom)
+  Lizenz: BSD-3-Clause; libheif/libde265: LGPL-3.0; x265: GPL-2.0+; aom: BSD-2-Clause
+  https://github.com/bigcat88/pillow_heif
+
+imageio-ffmpeg
+  Lizenz: BSD-2-Clause
+  https://github.com/imageio/imageio-ffmpeg
+
+python-docx, openpyxl, et_xmlfile
+  Lizenz: MIT
+  https://github.com/python-openxml/python-docx  ·  https://foss.heptapod.net/openpyxl/openpyxl
+
+lxml
+  Lizenz: BSD-3-Clause
+  https://lxml.de
+
+Python-Markdown
+  Lizenz: BSD-3-Clause
+  https://github.com/Python-Markdown/markdown
+
+PyInstaller (Bootloader)
+  Lizenz: GPL-2.0 mit Ausnahme für gebündelte Programme
+  https://pyinstaller.org

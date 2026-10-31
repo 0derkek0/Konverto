@@ -1,0 +1,14 @@
+# Umgebung
+.venv/
+__pycache__/
+*.pyc
+
+# Build-Ausgaben (werden von packaging/build.py erzeugt)
+build/
+dist/
+assets/icon.ico
+packaging/msix_assets/
+
+# Test-Zertifikat (privater Schluessel!)
+packaging/test_cert.pfx
+packaging/test_cert.cer
